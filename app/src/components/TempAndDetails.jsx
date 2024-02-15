@@ -37,6 +37,18 @@ function TempAndDetails() {
             </div>
           </div>
         </div>
+
+
+        <div className="flex flex-row items-center justify-center space-x-2 text-white py-7">
+          <UilSun/>
+          <p className="text-white font-light">Sunrise: 6:00 AM</p>
+          <UilSunset/>
+          <p className="text-white font-light mr-2">Sunset: 6:00 PM</p>
+          <UilArrowUp/>
+          <p className="text-white font-light mr-2">Max: 19C</p>
+          <UilArrowDown/>
+          <p className="text-white font-light mr-2">Min: 19C</p>
+        </div>
       </div>
     </div>
   );
