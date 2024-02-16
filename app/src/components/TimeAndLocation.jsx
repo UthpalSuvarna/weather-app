@@ -9,7 +9,7 @@ function TimeAndLocation() {
         </p>
       </div>
       <div className="flex justify-center items-center my-6">
-        <p className="text-white text-5xl font-bold my-5"> LONDON</p>
+        <p className="text-white text-4xl font-bold my-2"> LONDON</p>
       </div>
     </div>
   );
