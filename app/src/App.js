@@ -7,7 +7,7 @@ import Forecast from "./components/Forecast";
 
 function App() {
   return (
-    <div className="mx-auto max-w-screen py-5 px-10 bg-slate-950">
+    <div className="mx-auto max-w-screen py-5 px-1 bg-neutral-950">
       <TopButtons />
       <Search />
       <TimeAndLocation />

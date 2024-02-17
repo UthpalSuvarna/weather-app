@@ -17,9 +17,11 @@ function TempAndDetails() {
           <p className="text-white font-extralight my-5">Rainy/Sunny </p>
         </div>
         <div className="text-white flex flex-row justify-evenly items-center py-1">
-          <img src="logo192.png" alt="sun" className=" w-36"/>
-          <p className="flex flex-col space-y-2 text-6xl font-bold">19C</p>
-          <div className="flex flex-col space-y-2 w-72">
+          <div className="w-60 flex justify-center items-center">
+            <img src="logo192.png" alt="sun" className=" w-28"/>
+          </div>
+          <p className="flex flex-col space-y-2 text-6xl font-bold w-60 justify-center items-center">19C</p>
+          <div className="flex flex-col space-y-2 w-60">
             <div className="flex font-light items-center justify-start">
               <UilTemperature size={18} className=" mx-2" />
               Real feel:
