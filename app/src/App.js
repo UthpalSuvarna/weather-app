@@ -12,7 +12,8 @@ function App() {
       <Search />
       <TimeAndLocation />
       <TempAndDetails />
-      <Forecast />
+      <Forecast title="Hourly Forecast" />
+      <Forecast title="Daily Forecast" />
     </div>
   );
 }
