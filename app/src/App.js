@@ -4,8 +4,15 @@ import Search from "./components/Search";
 import TimeAndLocation from "./components/TimeAndLocation";
 import TempAndDetails from "./components/TempAndDetails";
 import Forecast from "./components/Forecast";
+import getWeatherData from "./services/weatherServices";
 
 function App() {
+  const fetchWeatherData = async () => {
+    const data = await getWeatherData("weather", { q: "tokyo" });
+    console.log(data);
+  };
+
+  fetchWeatherData();
   return (
     <div className="mx-auto max-w-screen py-5 px-1 bg-neutral-950">
       <TopButtons />
