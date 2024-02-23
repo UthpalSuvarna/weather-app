@@ -7,12 +7,12 @@ import Forecast from "./components/Forecast";
 import getWeatherData from "./services/weatherServices";
 
 function App() {
-  const fetchWeatherData = async () => {
-    const data = await getWeatherData("weather", { q: "tokyo" });
+  const getFormattedData = async () => {
+    const data = await getWeatherData({ q: "tokyo" });
     console.log(data);
   };
 
-  fetchWeatherData();
+  getFormattedData();
   return (
     <div className="mx-auto max-w-screen py-5 px-1 bg-neutral-950">
       <TopButtons />
