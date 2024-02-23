@@ -1,4 +1,4 @@
-# # React Weather App
+# React Weather App
 
 This project is a simple weather application built with React.js. It uses the OpenWeatherMap API to fetch weather data based on user's input.
 

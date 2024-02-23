@@ -4,23 +4,37 @@ import Search from "./components/Search";
 import TimeAndLocation from "./components/TimeAndLocation";
 import TempAndDetails from "./components/TempAndDetails";
 import Forecast from "./components/Forecast";
-import getWeatherData from "./services/weatherServices";
+import getFormattedWeatherData from "./services/weatherServices";
+import {useState, useEffect } from "react";
 
 function App() {
-  const getFormattedData = async () => {
-    const data = await getWeatherData({ q: "tokyo" });
-    console.log(data);
-  };
+  const [query, setQuery] = useState({ q: "mangaluru" });
+  const [units, setUnits] = useState("metric");
+  const [weatherData, setWeatherData] = useState(null);
 
-  getFormattedData();
+  useEffect(() => {
+    const fetchWeatherData = async () => {
+      const data = await getFormattedWeatherData({ ...query, units }).then(
+        (data) => {
+          setWeatherData(data);
+        }
+      );
+    };
+
+    fetchWeatherData();
+  }, [query, units]);
   return (
     <div className="mx-auto max-w-screen py-5 px-1 bg-neutral-950">
       <TopButtons />
       <Search />
-      <TimeAndLocation />
-      <TempAndDetails />
-      <Forecast title="Hourly Forecast" />
-      <Forecast title="Daily Forecast" />
+      {weatherData && (
+        <div>
+          <TimeAndLocation weather={weatherData} />
+          <TempAndDetails weather={weatherData}/>
+          <Forecast title="Hourly Forecast" />
+          <Forecast title="Daily Forecast" />
+        </div>
+      )}
     </div>
   );
 }
