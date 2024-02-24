@@ -1,9 +1,7 @@
 # React Weather App
-
-This project is a simple weather application built with React.js. It uses the OpenWeatherMap API to fetch weather data based on user's input.
+Simple Weather App built with React.js to learn API integration and React fundamentals.
 
 ## Features
-
 - Search for a city to get current weather information
 - Displays temperature, humidity, wind speed, and weather conditions
 - Responsive design
