@@ -4,38 +4,44 @@ function TopButtons() {
   const cities = [
     {
       id: 1,
-      title: "New York",
+      title: "Mangaluru",
     },
     {
       id: 2,
-      title: "Los Angeles",
+      title: "Moodabidri",
     },
     {
       id: 3,
-      title: "Chicago",
+      title: "Karkala",
     },
     {
       id: 4,
-      title: "Houston",
+      title: "Mysuru",
     },
     {
       id: 5,
-      title: "Phoenix",
+      title: "Bengaluru",
     },
+    {
+      id: 6,
+      title: "Delhi",
+    }
   ];
   return (
-    <div className="flex items-center justify-center my-6">
-      {cities.map((city) => {
-        return (
-          <button
-            key={city.id}
-            className="mx-2 px-4 py-2 text-white rounded-md"
-          >
-            {city.title}
-          </button>
-        );
-      })}
-    </div>
+    <div className="flex flex-wrap justify-center my-6">
+  {cities.map((city) => {
+    return (
+      <button
+        key={city.id}
+        className="m-2 px-4 py-2 text-white"
+        style={{ minWidth: '100px' }} 
+      >
+        {city.title}
+      </button>
+    );
+  })}
+</div>
+
   );
 }
 
