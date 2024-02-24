@@ -36,13 +36,13 @@ function TempAndDetails({
             <img src={iconUrlFromCode(icon)} alt="sun" className=" w-28" />
           </div>
           <p className="flex flex-col space-y-2 text-6xl font-bold w-60 justify-center items-center">
-            {`${temp.toFixed()}°C`}
+            {`${temp.toFixed()}°`}
           </p>
           <div className="flex flex-col space-y-2 w-60">
             <div className="flex font-light items-center justify-start">
               <UilTemperature size={18} className=" mx-2" />
               Real feel:
-              <span className=" font-bold mx-1">{`${feels_like}°C`}</span>
+              <span className=" font-bold mx-1">{`${feels_like}°`}</span>
             </div>
             <div className="flex font-light items-center justify-start">
               <UilTear size={18} className=" mx-2" />
@@ -63,9 +63,9 @@ function TempAndDetails({
           <UilSunset />
           <p className="text-white font-light mr-2">Sunset: {formatToLocalTime(sunset,timezone,"hh:mm a")}</p>
           <UilArrowUp />
-          <p className="text-white font-light mr-2">Max: {`${temp_max}°C`}</p>
+          <p className="text-white font-light mr-2">Max: {`${temp_max}°`}</p>
           <UilArrowDown />
-          <p className="text-white font-light mr-2">Min: {`${temp_min}°C`}</p>
+          <p className="text-white font-light mr-2">Min: {`${temp_min}°`}</p>
         </div>
       </div>
     </div>

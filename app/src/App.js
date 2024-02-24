@@ -25,8 +25,8 @@ function App() {
   }, [query, units]);
   return (
     <div className="mx-auto max-w-screen py-5 px-1 bg-zinc-950">
-      <TopButtons />
-      <Search />
+      <TopButtons setQuery={setQuery}/>
+      <Search setQuery={setQuery} units={units} setUnits={setUnits}/>
       {weatherData && (
         <div>
           <TimeAndLocation weather={weatherData} />
