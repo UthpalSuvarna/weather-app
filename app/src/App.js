@@ -24,7 +24,7 @@ function App() {
     fetchWeatherData();
   }, [query, units]);
   return (
-    <div className="mx-auto max-w-screen py-5 px-1 bg-neutral-950">
+    <div className="mx-auto max-w-screen py-5 px-1 bg-zinc-950">
       <TopButtons />
       <Search />
       {weatherData && (
